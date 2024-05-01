@@ -1,14 +1,20 @@
-function saveName() {
+function saveNameByInput() {
     const nameInput = document.querySelector("#name-input")
-    name =  nameInput.value
+    nameCharacther =  nameInput.value
     localStorage.setItem('name', nameInput.value);
+}
+
+function saveNameByVar() {
+    const nameInput = document.querySelector("#name-input")
+    nameInput.value = nameCharacther
+    localStorage.setItem('name', nameCharacther);
 }
 
 function loadName() {
     return localStorage.getItem('name') ?? "";
 }
 function showName() {
-    document.querySelector("#name-input").value = name
+    document.querySelector("#name-input").value = nameCharacther
 }
 
 
@@ -204,6 +210,10 @@ function handleFile() {
             console.log('JSON carregado com sucesso!');
             console.log(skills);
             saveSkills()
+
+            nameCharacther = file.name.split('.').slice(0, -1).join('.');
+
+            saveNameByVar()
             statsElement.innerHTML = generateHTML(language, hideNoneValue);
 
         } catch (error) {
@@ -221,10 +231,9 @@ function loadDataSkills() {
 var language = 'pt-br';
 var hideNoneValue = false;
 
-var name = loadName()
+var nameCharacther = loadName()
 
 const statsElement = document.querySelector('#stats');
 
 statsElement.innerHTML = generateHTML(language, hideNoneValue);
 showName()
-
