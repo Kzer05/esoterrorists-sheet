@@ -1,0 +1,160 @@
+body {
+    background-color: #1d1d2d;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: "Lora", serif;
+    font-size: 20px;
+}
+
+#file-input {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    user-select: none;
+    height: 0;
+    width: 0;
+    border: none;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+#configs {
+    height: 60px;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    display: relative;
+}
+
+#name-input {
+    display: inline;
+    text-align: left;
+    width: 30%;
+    margin-left: 5%;
+    height: 80%;
+    border-radius: 0px 10px 10px 0;
+    color: white;
+    font-size: 25px;
+}
+
+#options {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+
+input {
+    background-color: transparent;
+    color: white;
+    border: none;
+    width: 50%;
+    font-size: 20px;
+}
+
+#options * {
+    margin-right: 20px;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+#stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    background-color: black;
+    padding: 15px;
+    width: 80%;
+    margin-bottom: 20px;
+    border-top: solid 1px white;
+    border-radius: 0 0 20px 20px;
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    width: 100%;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    border-top: solid 1px rgba(250, 250, 250, 0.5);
+}
+
+.values {
+    display: flex;
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        overflow-x: scroll;
+        font-size: 15px !important;
+        overflow-x: hidden;
+    }
+
+    #configs {
+        height: 50px;
+        font-size: 35px;
+    }
+
+    #language {
+        margin-right: 40px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    .skill {
+        font-size: 15px;
+        padding-top: 5px;
+        margin-bottom: 10px;
+
+    }
+
+    #stats {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .skill {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    input {
+        font-size: 15px !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .card {
+        width: 250px;
+        height: 630px;
+    }
+}

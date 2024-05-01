@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="file" name="file-input" accept=".json" id="file-input" >
+
+    <div id="configs">
+        <input type="text" name="name" id="name-input" placeholder="Name" onchange="saveName()">
+        <div id="options">
+            <ion-icon id="language" name="language-outline" onclick="changeLanguage()"></ion-icon>
+            <ion-icon id="hide-none-value" name="eye-outline" onclick="changeHideNoneValue()"></ion-icon>
+            <ion-icon id="download" name="download-outline" onclick="downloadSkills()"></ion-icon>
+            <ion-icon id="loadDataSkills" name="cloud-download-outline" onclick="loadDataSkills()"></ion-icon>
+        </div>
+    </div>
+
+    <div id="stats">
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
